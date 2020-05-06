@@ -1,0 +1,108 @@
+/*LAYOUT*/
+.main-container{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+/*GENERAL*/
+ul{
+    list-style-type: normal;
+}
+.clear{
+    clear: both;
+}
+h1,
+h2{
+    text-transform: uppercase;
+}
+
+/*ASIDE*/
+aside{
+    background-color: #4D4239;
+    width: 30%;
+    margin-right: 3%;
+}
+aside *{
+    color: white;
+}
+aside h2{
+    letter-spacing: 2px;
+}
+aside h2 ul{
+    list-style-type: circle;
+}
+aside section h2:first-child{
+    border-bottom: 2px solid white;
+}
+#profile-pic img{
+    border-radius: 50%;
+    width: 200px; 
+    height: 200px;
+}
+
+/*MAIN*/
+main section h2{
+    letter-spacing: 5px;
+}
+.hero{
+    background-color: #B3913D;
+    box-shadow: 1px 1px 10px 3px #4D4239 inset;
+    padding: 15% 0;
+    text-align: center;
+}
+.hero h2{
+    color: white;
+    border-top: 2px solid white;
+    letter-spacing: 10px;
+}
+.hero h1{
+    letter-spacing: 10px;
+}
+
+.presentacion p{
+    line-height: 2em;
+    background-color: #B3913D;
+    padding: 10px;
+}
+
+article h3 {
+    font-weight: bold;
+}
+article h4{
+    font-weight: bold;
+}
+article ul{
+    list-style-type: square;
+}
+.referencias{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #B3913D;
+}
+.referencias article{
+    width: 50%;
+    text-align: center;
+}
+
+dt,
+dd{
+    line-height: 1.5em;
+    border-top: 1px solid white;
+}
+dt{
+    font-weight: bolder;
+    clear: left;
+    width: 30%;
+    float: left;
+}
+dd{
+    clear: right;
+    width: 50%;
+    float: left;
+    margin: 0;
+}
+dt:last-of-type,
+dd:last-of-type{
+    border-bottom: 1px solid white;
+}
+
