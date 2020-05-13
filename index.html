@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Jorge Luis Quispe Gomez</title>
     <link rel="stylesheet" href="css\main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <title>CodePen - Step by step form</title>
+    <link href=
+    'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic&subset=latin,latin-ext'
+    rel='stylesheet' type='text/css'><link rel="stylesheet" href="css\style.css">
 </head>
 <body>
     <div class="main-container">
@@ -57,15 +62,46 @@
                 <h2>Contacto</h2>
                 <ul>
                     <li>Tefelono:940234968</li>
-                    <li><a href="https://www.facebook.com/JorgeLuisIngeniero">Facebook</a></li>
+                    <li class="animated infinite pulse"><a href="https://www.facebook.com/JorgeLuisIngeniero">Facebook</a></li>
                     <li>EMAIL: <a href="https://mail.google.com/">jorlured@gmail.com</a></li>
                 </ul>
+            </section>
+            <section>
+                <!-- partial:index.partial.html -->
+                <div ng-app="coolform" class="wrapper">
+                
+                    <div cool-form>
+                    <div class="q-title">Contácteme</div>
+                    <div ng-repeat="q in questions" class="question">
+                        <label>
+                        <span class="q-text">
+                            {{q.question}}
+                            <span class="q-answer">
+                            {{q.answer}}
+                            </span>
+                        </span>
+                        <input type="text" id="q{{$index}}" ng-model="q.answer">
+                        <span class="q-back" ng-click="open($index)"><</span>
+                        </label>
+                        <span class="q-next" ng-click="open($index+1)">></span>  
+                    </div>
+                    <div class="q-after">
+                        <hr>
+                        <div class="q-confirm-text">___¿La información es correcta?</div>
+                        <div class="q-confirm-button">Enviar</div>
+                    </div>
+                    </div>
+                    <center ng-show="activequestion > -1 && activequestion < questions.length">{{activequestion+1}} / {{questions.length}}</center>
+                    
+                </div>
+                <!-- partial -->
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script><script  src="script.js"></script>
             </section>
         </aside>
         <main>
             <section class="hero">
-                <h1>Jorge Luis Quispe Gomez</h1>
-                <h2>Ingeniero de Sistemas e Informatica</h2>
+                <h1 class="animated flip">Jorge Luis Quispe Gomez</h1>
+                <h2 class="animated infinite pulse">Ingeniero de Sistemas e Informatica</h2>
             </section>
             <section class="presentacion">
                 <h2>Presentacion Personal</h2>
@@ -137,7 +173,7 @@
                 <div class="referencias">
                     <article>
                         <figure>
-                            <img src="img\1.jpg" alt="Nombre1" height="100px" height="100px">
+                            <img class="animated flash" src="img\1.jpg" alt="Nombre1" height="100px" height="100px">
                             <figcaption>Ing Diego Martinez</figcaption>
                         </figure>
                         <span>999999999</span><br>
@@ -145,7 +181,7 @@
                     </article>
                     <article>
                         <figure>
-                            <img src="img\2.jpg" alt="Nombre2" height="100px" height="100px">
+                            <img class="animated flash" src="img\2.jpg" alt="Nombre2" height="100px" height="100px">
                             <figcaption>Rogrido Lara</figcaption>
                         </figure>
                         <span>888888888</span><br>
@@ -153,7 +189,7 @@
                     </article>
                     <article>
                         <figure>
-                            <img src="img\3.jpg" alt="Nombre2" height="100px" height="100px">
+                            <img class="animated flash" src="img\3.jpg" alt="Nombre2" height="100px" height="100px">
                             <figcaption>Ing Carlos Meza</figcaption>
                         </figure>
                         <span>7777777777</span><br>
@@ -161,7 +197,7 @@
                     </article>
                     <article>
                         <figure>
-                            <img src="img\ref.jpg" alt="Nombre4" height="100px" height="100px">
+                            <img class="animated flash" src="img\ref.jpg" alt="Nombre4" height="100px" height="100px">
                             <figcaption>Luis Gomez</figcaption>
                         </figure>
                         <span>66666666666</span><br>
